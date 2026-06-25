@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>斗地主 · 简明指南与提醒</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f3ef;
+      color: #1e1e1e;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .hero {
+      background: linear-gradient(133deg, #191a1c 0%, #2b2d30 50%, #1f2022 100%);
+      color: #e8e6e0;
+      padding: 4.5rem 1.5rem 3.2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 450;
+      letter-spacing: 2px;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      opacity: 0.7;
+      max-width: 36rem;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 3.5rem;
+    }
+
+    .intro {
+      background: white;
+      border-radius: 28px;
+      padding: 2.5rem 2.2rem;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.2rem;
+    }
+
+    .intro p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #2c2c2c;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlight-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 2.2rem 0 1.8rem;
+    }
+
+    .card {
+      flex: 1 1 200px;
+      background: white;
+      border-radius: 24px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.02);
+      border: 1px solid #edeae4;
+      transition: box-shadow 0.15s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.7rem;
+      color: #262626;
+      letter-spacing: 0.3px;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: #4b4b4b;
+      line-height: 1.6;
+    }
+
+    .accent {
+      color: #b7462a;
+      font-weight: 450;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s;
+    }
+
+    .accent:hover {
+      border-bottom-color: #b7462a;
+    }
+
+    .faq-summary {
+      background: #faf9f6;
+      border-radius: 24px;
+      padding: 2rem 2rem 1.6rem;
+      margin: 2rem 0 2.5rem;
+      border-left: 4px solid #b7462a;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    .faq-item {
+      margin-bottom: 1.2rem;
+    }
+
+    .faq-item strong {
+      font-weight: 500;
+      color: #1f1f1f;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      font-size: 0.92rem;
+      color: #4a4a4a;
+    }
+
+    .reminder-box {
+      background: #fffcf8;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      border: 1px solid #e7ddd2;
+      margin: 2rem 0 1.2rem;
+    }
+
+    .reminder-box h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      color: #2d2d2d;
+    }
+
+    .reminder-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .reminder-box li {
+      padding: 0.4rem 0 0.4rem 1.2rem;
+      position: relative;
+      color: #383838;
+      font-size: 0.95rem;
+    }
+
+    .reminder-box li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: #b7462a;
+      font-weight: bold;
+    }
+
+    .footer-note {
+      text-align: center;
+      padding: 2rem 0 1.8rem;
+      font-size: 0.85rem;
+      color: #888580;
+      border-top: 1px solid #e0dbd3;
+      margin-top: 2rem;
+    }
+
+    .footer-note a {
+      color: #555;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .footer-note a:hover {
+      color: #b7462a;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .intro {
+        padding: 1.8rem 1.2rem;
+      }
+      .highlight-grid {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .faq-summary {
+        padding: 1.5rem 1.2rem;
+      }
+      .reminder-box {
+        padding: 1.4rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>斗地主 · 简明指南</h1>
+    <p class="sub">牌局规则、决策思路与适度参与提醒</p>
+  </section>
+
+  <div class="container">
+
+    <div class="intro">
+      <p>
+        斗地主是一款流传广泛、节奏明快的三人牌类游戏，考验记牌、配合与叫牌判断。对新手而言，了解基础规则和常见策略比临时猜测更有帮助。下文从玩法概要、实用亮点和参与建议三个角度展开。
+      </p>
+      <p>
+        若你希望查阅更完整的规则、术语或历史背景，可前往 <a href="https://china-doudizhu.com" class="accent">斗地主</a> 了解更多。该页面保持相对克制的信息呈现，适合作为辅助参考。
+      </p>
+    </div>
+
+    <div class="highlight-grid">
+      <div class="card">
+        <h3>叫牌与底分</h3>
+        <p>叫牌决定地主身份和底分倍数。通常从低分开始，根据手牌强弱依次加注。盲目抢地主容易陷入被动，建议先观察一轮。</p>
+      </div>
+      <div class="card">
+        <h3>牌型与配合</h3>
+        <p>单张、对子、三带、顺子、炸弹等构成基本牌型。农民方需注意互相策应，不必急于压牌，有时放走小牌更有利。</p>
+      </div>
+      <div class="card">
+        <h3>记牌与判断</h3>
+        <p>关注已出的大牌和关键张（如2、王），推测剩余炸弹或顺子可能性。记牌不是负担，而是逐步积累的牌感。</p>
+      </div>
+    </div>
+
+    <div class="faq-summary">
+      <h2>常见疑问摘要</h2>
+      <div class="faq-item">
+        <strong>斗地主有标准规则吗？</strong>
+        <p>不同地方存在细微差异，但核心规则（17张牌、叫地主、春天/反春）基本一致。建议在熟悉通用版本后再了解变体。</p>
+      </div>
+      <div class="faq-item">
+        <strong>如何提高胜率？</strong>
+        <p>从控制叫牌频率开始——手牌无炸弹或大单张时谨慎叫地主。农民方记住：拆牌配合比单打独斗更有效。</p>
+      </div>
+      <div class="faq-item">
+        <strong>是否适合快速对局？</strong>
+        <p>一局通常3-8分钟，适合碎片时间。但连续多局容易陷入惯性出牌，建议每打两三局稍作停顿回顾。</p>
+      </div>
+    </div>
+
+    <div class="reminder-box">
+      <h2>参与提醒</h2>
+      <ul>
+        <li>斗地主是娱乐性牌类游戏，输赢随机性强，不宜过度关注短期结果。</li>
+        <li>若与陌生人线上组局，注意保护个人账户信息，不点击来源不明的外链。</li>
+        <li>适度参与，避免因连败或连胜利影响情绪节奏。感到疲倦时不妨暂停。</li>
+        <li>部分平台设有练习场或低分场，适合新手熟悉流程，可优先利用。</li>
+      </ul>
+    </div>
+
+    <div class="footer-note">
+      <p>本页为信息介绍，不构成游戏建议。如需了解详细规则，请查阅 <a href="https://china-doudizhu.com">斗地主</a> 相关内容。</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
